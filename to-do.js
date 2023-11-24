@@ -88,4 +88,14 @@ function removeTask(id){
 
 removeTask(3)
 
-console.log(taskList)
+
+//--------------------------------------------------------------------------------------
+// Listar
+
+function listTask(){
+  taskList.forEach(item => {
+    console.log(`Cód: ${item.id} | Nome: ${item.name.padEnd(30)} | Feito: ${item.isDone ? 'Sim' : 'Não'}`)
+  })
+}
+
+listTask()
