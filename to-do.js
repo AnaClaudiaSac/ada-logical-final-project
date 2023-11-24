@@ -35,7 +35,7 @@ addTask(task3);
 
 addTask({
   name: 'estudar',
-  isDone: false,
+  isDone: true,
 });
 
 const task4 = {
@@ -53,7 +53,6 @@ addTask(task5)
 addTask(task4)
 
 //----------------------------------------------------------------------------
-
 // Editar
 
 function editTask(id, task) {
@@ -78,7 +77,6 @@ editTask(4,{
 });
 
 //---------------------------------------------------------------------------------------
-
 //Remover
 
 function removeTask(id){
