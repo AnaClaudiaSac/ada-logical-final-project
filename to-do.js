@@ -94,8 +94,18 @@ removeTask(3)
 
 function listTask(){
   taskList.forEach(item => {
-    console.log(`Cód: ${item.id} | Nome: ${item.name.padEnd(30)} | Feito: ${item.isDone ? 'Sim' : 'Não'}`)
+    console.log(`Cód: ${item.id} | Nome: ${item.name.padEnd(30)} | Feito: ${item.isDone ? 'Sim' : 'Não'}`);
   })
-}
+};
 
 listTask()
+
+//-----------------------------------------------------------------------------------
+//Mostar
+
+function showTask(id){
+  let item = taskList.find(item => item.id == id);
+  console.log(`Cód: ${item.id} | Nome: ${item.name.padEnd(30)} | Feito: ${item.isDone ? 'Sim' : 'Não'}`);
+
+}
+showTask(2)
