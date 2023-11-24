@@ -110,3 +110,5 @@ function showTask(id){
 };
 
 showTask(2)
+
+console.log(taskList)
