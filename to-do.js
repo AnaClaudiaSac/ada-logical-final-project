@@ -17,7 +17,16 @@ let taskList = []
 
 
 function addTask(task) {
-  taskList.push(task);
+  let id = 1
+
+  if (taskList.length > 0)
+    id = taskList[taskList.length - 1].id + 1
+
+  taskList.push({
+    id: id,
+    name: task.name,
+    isDone: task.isDone,
+  });
 };
 
 addTask(task1);
@@ -43,10 +52,30 @@ const task5 = {
 addTask(task5)
 addTask(task4)
 
+//----------------------------------------------------------------------------
 
+// Editar
 
+function editTask(id, task) {
+  for (let i = 0; i < taskList.length; i++) {
+    if(taskList[i].id == id){
+      taskList[i].name = task.name;
+      taskList[i].isDone = task.isDone;
+    }
+    
+  };
 
+ };
 
+editTask(5,{
+  name: 'estudar javaScript',
+  isDone: false
+})
+
+editTask(4,{
+  name: 'treinar',
+  isDone: true,
+})
 
 
 console.log(taskList)
