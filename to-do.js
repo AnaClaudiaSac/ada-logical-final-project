@@ -77,5 +77,15 @@ editTask(4,{
   isDone: true,
 })
 
+//---------------------------------------------------------------------------------------
+
+//Remover
+
+function removeTask(id){
+  let index = taskList.findIndex(item => item.id == id);
+  taskList.splice(index, 1)
+}
+
+removeTask(3)
 
 console.log(taskList)
