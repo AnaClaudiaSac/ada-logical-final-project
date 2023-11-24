@@ -70,12 +70,12 @@ function editTask(id, task) {
 editTask(5,{
   name: 'estudar javaScript',
   isDone: false
-})
+});
 
 editTask(4,{
   name: 'treinar',
   isDone: true,
-})
+});
 
 //---------------------------------------------------------------------------------------
 
@@ -84,7 +84,7 @@ editTask(4,{
 function removeTask(id){
   let index = taskList.findIndex(item => item.id == id);
   taskList.splice(index, 1)
-}
+};
 
 removeTask(3)
 
@@ -107,5 +107,6 @@ function showTask(id){
   let item = taskList.find(item => item.id == id);
   console.log(`Cód: ${item.id} | Nome: ${item.name.padEnd(30)} | Feito: ${item.isDone ? 'Sim' : 'Não'}`);
 
-}
+};
+
 showTask(2)
